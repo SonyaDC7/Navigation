@@ -25,9 +25,12 @@ struct ContentView: View {
                 
                 
             } //end vstack
+            .toolbar{
+                ToolbarItemGroup(placement: .status) {
+                    NavigationLink(destination: SecondView()) {Text("About")}} }
             .navigationTitle("Home")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarHidden(true)
+            .navigationBarHidden(false)
         } //end navigation stack
 
     } //end var body
