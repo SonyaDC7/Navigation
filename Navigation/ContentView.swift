@@ -15,13 +15,21 @@ struct ContentView: View {
             VStack { //start vstack
                 Text("This is the root view 🌳")
                 
-                NavigationLink(destination: Text("You've arrived to the Second View 🎊")) {
+                NavigationLink(destination: SecondView()) {
                     Text("Click me!")
                 } //end navigation link, 2nd view
 
+                NavigationLink(destination: Text("You've arrived at the third view!!")) {Text("Click me for third view!")
+                        .bold()
+                        .italic()}
+                
+                
             } //end vstack
-            
+            .navigationTitle("Home")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
         } //end navigation stack
+
     } //end var body
 } //end contentview
 
